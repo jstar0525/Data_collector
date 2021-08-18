@@ -1,0 +1,19 @@
+<launch>
+  <node pkg="rosbag" type="record" name="record_ros"
+        args="-o /home/robotv/data/
+              /camera/aligned_depth_to_color/camera_info
+              /camera/aligned_depth_to_color/image_raw
+              /camera/color/camera_info
+              /camera/color/image_raw
+              /camera/extrinsics/depth_to_color
+              /audio
+              /audio/channel0
+              /audio/channel1
+              /audio/channel2
+              /audio/channel3
+              /audio/channel4
+              /audio/channel5
+              /sound_direction
+              --split --duration 60" 
+        output="screen"/>
+</launch>
