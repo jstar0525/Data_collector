@@ -80,3 +80,28 @@ $ python get_indx.py
 
 Input Device id  24  -  ReSpeaker 4 Mic Array (UAC1.0): USB Audio (hw:2,0)
 ```
+
+# router
+
+[./src/1_ip.png]
+
+
+# Run ROS
+
+```bash
+$ roscore
+```
+```bash
+$ roslauncn realsense2_camera my_camera.launch
+```
+```bash
+$ sudo su
+$ source /opt/ros/melodic/setup.bash
+$ suorce /home/robotv/catkin_ws/devel/setup.bash
+$ rosrun respeaker_ros respeaker_node.py
+```
+```
+$ sudo mount /dev/sda1 /home/robotv/data
+$ sudo chmod 777 /home/robotv/data
+$ cd ~/data
+$ roslaunch record.launch
